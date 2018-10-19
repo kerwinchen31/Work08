@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "sieve.h"
+
+int sieve(int n){
+  int a = nlog(n) * 1.5;
+  int *array[a];
+  int i;
+  for(i = 0; i <= a; i++){
+    array[i] = 0;
+  }
+  
