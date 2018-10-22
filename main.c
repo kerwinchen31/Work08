@@ -10,7 +10,7 @@ int main(int argc, char * argv[]){
 
   int iterations = 1;
 
-  int target = 1000;
+  int target = 5500;
 
   if(argc > 1){
 
