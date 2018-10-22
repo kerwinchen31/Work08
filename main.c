@@ -4,6 +4,6 @@
 #include "sieve.h"
 
 int main(){
-  printf("%l", sieve(1000000));
+  printf("\n answer %d \n", sieve(1000000));
   return 0;
 }
