@@ -5,47 +5,24 @@
 
 int sieve(int n){
   int a = log(n) * n * 1.15;
-  char *p = malloc(a * sizeof(char));
-  char *temp = p;
-  int j = 2;
-  int k, i;
+  char *p = malloc(a);
+  int b = 1;
+  int x = 0;
+  int k,i;
   for(i = 0; i < a; i++){
-    if (!(i % 2 || i % 3)){
-      p[i] = 2;
-    }else{
     p[i] = 1;
-    }
-    //printf("%d ", *p);
   }
-  p[a] = 0;
-  /*
-  while (*p){
-    *p = 1;
-    p++;
-    }*/
-  while (p[j]){
-    for (k = j; k < a; k++){
-      //printf("%d", j);
-      if (!(k % j)){
-	*(p+k) = 2;
-      }
+  while(x < n){
+    b++;
+    if (p[b]){
+    for (k = b*2; k < a; k+=b){
+	*(p+k) = 0;
     }
-    p[j] = 3;
-    //printf("\n ------------------ \n");
-    /*for(i = 0; i < a; i++){
-    printf("%d ", p[i]);
-    }*/
-    j++;
-    while(p[j] == 2){
-      j++;
-    }
+    x++;
   }
-  while(p[j] != 3){
-    j--;
-    }
+  }
   free(p);
-  return j;
+  return b;
    
 }
-      
-  
+

@@ -10,7 +10,7 @@ int main(int argc, char * argv[]){
 
   int iterations = 1;
 
-  int target = 5500;
+  int target = 1000000;
 
   if(argc > 1){
 
@@ -35,7 +35,6 @@ int main(int argc, char * argv[]){
     ans=sieve(target);
 
     iterations--;
-    printf("1k prime takes about 0.11s, 10k prime takes about 8.879 seconds, 1 millionth takes too long..... :( \n");
     printf("The n=%d prime is %d\n", target, ans );
 
 
